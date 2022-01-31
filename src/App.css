@@ -1,38 +1,148 @@
-.App {
+body {
+  background: linear-gradient(
+    rgb(215, 172, 240),
+    rgb(140, 206, 236),
+    rgb(252, 226, 178),
+  );
+}
+
+.container {
+  max-width: 720px;
+  margin: 60px auto;
+}
+
+.weather-app-wrapper {
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  padding: 40px;
+  color: #878787;
+}
+
+form {
+  margin-top: 40px;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
+
+.search-input {
+  background: #f9f7fe;
+  border: none;
+  padding: 15px 20px;
+  display: inline-block;
+  border-radius: 6px;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  height: 50px;
+  line-height: 20px;
+}
+
+.search-btn {
+  background: #be12a2;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 0;
+  border: none;
+  height: 50px;
+}
+
+.weather {
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+h1 {
+  /* margin: 20px 0 10px; */
+  line-height: 29px;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 48px;
+  color: #be12a2;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  list-style: none;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+.temperature {
+  color: #212121;
+  font-weight: 400;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1;
+}
+
+.unit a {
+  color: #be12a2;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.inactive-link {
+  color: #212121;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.weather-forecast {
+  margin-top: 30px;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
+
+.forecast-day {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.forecasted-weather-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.75em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer a {
+  text-decoration: none;
+  color: #be12a2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loader {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
