@@ -52,7 +52,7 @@ form {
 
 .btn:hover{
   color: rgba(48, 48, 48, 0.8);
-  background-color: rgb(255, 255, 21, 0.7);
+  background-color: rgba(0, 68, 255, 0.795);
 }
 .weather {
   margin-top: 30px;
