@@ -17,16 +17,16 @@ export default function WeatherForecastDay(props) {
     const day = date.getDay();
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-    return days[day];
+    return days[day +1];
   }
 
   return (
     <div>
       <div className="WeatherForecast-day">{formattedDay()}</div>
-      <WeatherIcon code={props.data.weather[0].icon} size={36} />
+      <WeatherIcon code={props.data.weather[0].icon} size={40} />
       <div className="WeatherForecast-temp">
-        <span className="WeatherForecast-temp-max">{maxTemperature()}</span>
-        <span className="WeatherForecast-temp-min">{minTemperature()}</span>
+        <span className="WeatherForecast-temp-max">{maxTemperature()}C</span>
+        <span className="WeatherForecast-temp-min">{minTemperature()}C</span>
       </div>
     </div>
   );

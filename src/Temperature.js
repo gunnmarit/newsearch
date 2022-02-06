@@ -1,42 +1,49 @@
 import React, { useState } from "react";
 
-export default function WeatherTemperature(props){
-    const [unit, setUnit] = useState("celsius");
-function showFarenheit(evenet){
-    evenet.preventDefault();
-    setUnit("farenheit");
-}
+export default function Temperature(props) {
+  const [unit, setUnit] = useState("celcius");
 
-function showCelsius(evenet){
-    evenet.preventDefault();
-    setUnit("celsius")
-}
+  const setCelcius = (e) => {
+    e.preventDefault();
+    setUnit("celcius");
+  };
 
-    if (unit === "celsius"){
-return(
-    <div className="WeatherTemperature">
-<span className="temperature">{Math.round(props.celsius)}
-</span> 
-<span className="unit">
-ºC | {""}
-<a href="/" onClick={showFarenheit}>
-    ºF
-    </a>
-</span>
-</div>
-);
-    } else{
-        let fahrenheit = (props.celsius*9/5)+32;
-        return (
-        <div className="WeatherTemperature">
-        <span className="temperature">{Math.round(fahrenheit)}</span> 
+  const toFarenheit = (temp) => {
+    return Math.round(temp * (9 / 5) + 32);
+  };
+
+  const setFarenheit = (e) => {
+    e.preventDefault();
+    setUnit(toFarenheit("farenheit"));
+  };
+
+  if (unit === "celcius") {
+    return (
+      <div className="temperature-container d-flex justify-content-end">
+        <span className="temperature">{Math.round(props.temperature)}</span>
         <span className="unit">
-        <a href="/" onClick={showCelsius}>
-      ºC
-            </a>{""}
-        | ºF
+          {" "}
+          <span className="inactive-link">°C</span>
+          <a href="/" onClick={setFarenheit}>
+            {" "}
+            °F
+          </a>
         </span>
-        </div>
-        );
-}
+      </div>
+    );
+  } else {
+    let farenheit = Math.round(props.temperature * (9 / 5) + 32);
+    return (
+      <div className="temperature-container d-flex justify-content-end">
+        <span className="temperature">{farenheit}</span>
+        <span className="unit">
+          {" "}
+          <a href="/" onClick={setCelcius}>
+            °C{" "}
+          </a>
+          <span className="inactive-link">°F</span>
+        </span>
+      </div>
+    );
+  }
 }

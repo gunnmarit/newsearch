@@ -5,8 +5,8 @@ import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   let [loaded, setLoaded] = useState(false);
-  let [weather, setWeather] = useState({});
   let [city, setCity] = useState(props.city);
+  let [weather, setWeather] = useState({});
 
   const handleResponse = (res) => {
     setWeather({
@@ -36,7 +36,7 @@ export default function Weather(props) {
   };
 
   const search = () => {
-    const apiKey = "ce7f3cb6658fc606e9cb42397a4c2dd1";
+    const apiKey = "69181bdb9d5f82f38a07c3cf8a85b271";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   };
@@ -44,6 +44,10 @@ export default function Weather(props) {
   if (loaded) {
     return (
       <div>
+            <h3> Wherever you go, <br />
+        no matter what the weather, <br />
+        always bring your own sunshine. 
+      </h3>
         <div>
           <form
             className="weather-search"
@@ -54,7 +58,7 @@ export default function Weather(props) {
               <div className="col-9">
                 <input
                   type="search"
-                  placeholder="Enter a city.."
+                  placeholder="Enter your city.."
                   className="form-control search-input"
                   id="search-input"
                   onChange={updateCity}
@@ -78,7 +82,7 @@ export default function Weather(props) {
     search();
     return (
       <div className="loader">
-          Loading
+          Loading.....
       </div>
     );
   }
