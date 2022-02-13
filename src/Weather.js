@@ -44,9 +44,9 @@ export default function Weather(props) {
   if (loaded) {
     return (
       <div>
-            <h3> Wherever you go, <br />
-        no matter what the weather, <br />
-        always bring your own sunshine. 
+            <h3> WHEREVER YOU GO, <br />
+        NO MATTER WHAT THE WEATHER, <br />
+        ALWAYS BRING YOUR OWN SUNSHINE. 
       </h3>
         <div>
           <form

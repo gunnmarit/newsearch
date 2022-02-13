@@ -24,7 +24,9 @@ export default function WeatherInfo(props) {
               </span>
             </li>
             <li>
-              Last updated: <FormattedDate date={props.weather.date} />
+              Last updated:{" "}
+              <span className="weather-feels-like"><FormattedDate date={props.weather.date} />
+              </span>
             </li>
           </ul>
         </div>

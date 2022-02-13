@@ -95,6 +95,10 @@ li:first-letter {
   line-height: 1;
 }
 
+.weather-feels-like{
+  font-weight: bold;
+}
+
 .unit a {
   color: #be12a2;
   font-size: 24px;
